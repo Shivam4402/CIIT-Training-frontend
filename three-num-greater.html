@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display()
+        {
+
+            var a = Number(document.getElementById("txt1").value);
+            var b = Number(document.getElementById("txt2").value);
+            var c = Number(document.getElementById("txt3").value);
+            var d = Number(document.getElementById("txt4").value);
+
+
+            var res="";
+
+            if(a>b && a>c && a>d)
+            {
+
+                res="A IS GREATER";
+            }
+        
+            else if(b>a && b>c && b>d)
+            {
+        
+                res="B IS GREATER";
+            }
+            else if(c>a && c>b && c>d)
+            {
+
+                res="C IS GREATER";
+            }
+
+            else if(d>a && d>b && d>c)
+            {
+
+                res="C IS GREATER";
+            }
+
+            else
+            {
+                res="ALL NUMBERS ARE EQUAL";
+            }
+        
+
+
+            document.getElementById("msg1").innerHTML="RESULT="+res;     
+
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+    <label>NUMBER A</label>
+    <input type="text" id="txt1"/><br><br>
+
+    <label>NUMBER B</label>
+    <input type="text" id="txt2"/><br><br>
+
+    <label>NUMBER C</label>
+    <input type="text" id="txt3"/><br><br>
+
+    <label>NUMBER D</label>
+    <input type="text" id="txt4"/><br><br>
+
+    <input type="button" value="Submit" onclick="display()"/>
+
+    </hr>
+    <h1 id="msg1"></h1>
+
+
+
+    
+</body>
+</html>

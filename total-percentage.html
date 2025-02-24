@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UseriInput Addition</title>
+    <script>
+
+        function total()
+
+        {
+            var eng = Number(document.getElementById("txt1").value);
+            var maths= Number(document.getElementById("txt2").value);
+            var sci = Number(document.getElementById("txt3").value);
+
+
+
+            var total_amount= eng+maths+sci;
+
+            var percentage= (total_amount/3).toFixed(2);
+
+            var result="";
+
+            var col="";
+
+
+            if(percentage>35){
+
+                result="PASS";
+                col="green"
+            }
+            else{
+                result="FAIL";
+                col="red";
+            }
+            document.getElementById("msg1").innerHTML="TOTAL="+total_amount;
+            document.getElementById("msg2").innerHTML="PERCAENTAGE="+percentage+"%";
+
+            document.getElementById("msg3").innerHTML="RESULT="+result;     
+            document.getElementById("msg3").style.backgroundColor=col;     
+
+
+
+        }
+    </script>
+
+
+</head>
+<body>
+    <label>ENGLISH</label>
+    <input type="text" id="txt1"/><br><br>
+
+    <label>MATHEMATICS</label>
+    <input type="text" id="txt2"/><br><br>
+
+    <label>SCIENCE</label>
+    <input type="text" id="txt3"/><br><br>
+
+    <input type="button" value="Submit" onclick="total()"/>
+
+    <hr/>
+
+    <h1 id="msg1"></h1>
+    <h1 id="msg2"></h1>
+    <h1 id="msg3"></h1>
+
+
+
+</body>
+</html>

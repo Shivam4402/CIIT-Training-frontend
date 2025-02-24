@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calculate(ch)
+        {
+            var a = Number(document.getElementById("txtnum1").value);
+            var b = Number(document.getElementById("txtnum2").value);
+
+            switch(ch)
+            {
+                case 1:
+                    {
+                        var c=a+b;
+                        document.getElementById("msg").innerHTML="ADDITION:"+c;
+                        break;
+
+                    }
+
+                case 2:
+                {
+                    var c=a-b;
+                    document.getElementById("msg").innerHTML="SUBSTRACTION:"+c;
+                    break;
+
+                }
+
+                case 3:
+                {
+                    var c=a*b;
+                    document.getElementById("msg").innerHTML="MULTIPLICATION:"+c;
+                    break;
+
+                }
+
+                case 4:
+                {
+                    var c=a/b;
+                    document.getElementById("msg").innerHTML="DIVISION:"+c;
+                    break;
+
+                }
+
+                default:
+                {
+                    alert("!! ERROR !! PLEASE TRY AGAIN..!!")
+                    break;
+
+                }
+
+            }
+
+            document.getElementById("msg").style.backgroundColor="green";
+
+        }
+    </script>
+
+
+
+
+
+</head>
+<body>
+    <label>Number 1:</label>
+    <input type="number" id="txtnum1"/><br><br>
+
+    <label>Number 2:</label>
+    <input type="number" id="txtnum2"/><br><br>
+
+    <input type="button" value="Addition" onclick="calculate(1);"/><br><br>
+
+    <input type="button" value="Substraction" onclick="calculate(2);"/><br><br>
+
+    <input type="button" value="Multiplication" onclick="calculate(3);"/><br><br>
+
+    <input type="button" value="Division" onclick="calculate(4);"/>
+
+    <hr>
+
+    <h1 id="msg"></h1>
+
+
+</body>
+</html>

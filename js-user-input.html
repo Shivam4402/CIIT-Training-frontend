@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserInput Addition</title>
+    <script>
+
+        function addition()
+        {
+            var a = Number(document.getElementById("txtnum1").value);
+
+            
+            var b = Number(document.getElementById("txtnum2").value);
+
+            var c= a+b;
+            Number(document.getElementById("msg").innerHTML="ADDITION="+c);
+
+
+        }
+    </script>
+
+
+</head>
+<body>
+    <label>Number 1</label>
+    <input type="text" id="txtnum1"/><br><br>
+
+    <label>Number 2</label>
+    <input type="text" id="txtnum2"/><br><br>
+
+    <input type="button" value="Submit" onclick="addition()"/>
+
+    <hr/>
+
+    <h1 id="msg"></h1>
+
+</body>
+</html>

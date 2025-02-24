@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function odd_even(){
+
+                     var num=document.getElementById("num-1").value;
+
+            
+                    if(num%2==0){
+
+
+                        document.getElementById("msg").innerHTML="EVEN NUMBER";
+            
+                    }
+
+                    else{
+                        document.getElementById("msg").innerHTML="ODD NUMBER";
+            
+            
+                    }
+        }
+      
+    </script>
+</head>
+<body>
+    
+    <label>Enter Number:</label>
+    <input type="number" id="num-1" /> </br></br>
+
+    <input type="button" value="Submit" onclick="odd_even()"/>
+
+    <hr/>
+
+    <h2 id="msg"></h2>
+    
+</body>
+</html>

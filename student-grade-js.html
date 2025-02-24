@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+
+            var eng = Number(document.getElementById("txt1").value);
+            var maths= Number(document.getElementById("txt2").value);
+            var sci = Number(document.getElementById("txt3").value);
+    
+    
+    
+            var total= eng+maths+sci;
+            var per= (total/3).toFixed(2);                
+            
+            var col="";
+            var grade="";
+    
+                if(per<=99 && per>=80)
+                    {
+                        grade="EXCELLENT";
+                        col="green";
+                    }
+                
+                else if(per<=80 && per>=60)
+                    {
+                        grade="GOOD";
+                        col="yellow";
+
+                    }
+                
+                else if(per<=60 && per>=40)
+                    {
+                        grade="AVERAGE";
+                        col="blue";
+
+                    }
+                
+                else if(per<=40 && per>=35)
+                    {
+                        grade="POOR";
+                        col="orange";
+
+                    }
+    
+                else 
+                    {
+                        grade="FAIL";
+                        col="red";
+
+                    }
+                
+
+
+            document.getElementById("msg1").innerHTML="TOTAL="+total;
+
+            document.getElementById("msg2").innerHTML="PERCAENTAGE="+per+"%";
+
+            // document.getElementById("msg3").style.backgroundColor=col; 
+
+
+            document.getElementById("msg3").innerHTML="GRADE="+grade;     
+            document.getElementById("msg3").style.backgroundColor=col;
+            
+            
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    <label>ENGLISH</label>
+    <input type="text" id="txt1"/><br><br>
+
+    <label>MATHEMATICS</label>
+    <input type="text" id="txt2"/><br><br>
+
+    <label>SCIENCE</label>
+    <input type="text" id="txt3"/><br><br>
+
+    <input type="button" value="Submit" onclick="display()"/>
+
+    <hr/>
+
+    <h1 id="msg1"></h1>
+    <h1 id="msg2"></h1>
+    <h1 id="msg3"></h1>
+
+
+</body>
+</html>

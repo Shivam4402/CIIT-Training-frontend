@@ -1,0 +1,36 @@
+.main{
+    background-color:red;
+    
+    width: 800px;
+    height: 600px;
+    
+    
+}
+
+.main-head{
+    text-align: center;
+    display: block;
+
+}
+
+
+.container{
+
+    background-color: #22c348;
+    width: 600px; 
+    height:500px;
+    
+
+  
+
+}
+
+.container-head{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+

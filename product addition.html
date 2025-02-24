@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Addition</title>
+    <script>
+
+        function total()
+        {
+
+            var p_id = Number(document.getElementById("txt1").value);
+            document.getElementById("num1").innerHTML = "Product_id: " + p_id;
+
+            var p_name = document.getElementById("txt2").value;
+            document.getElementById("num2").innerHTML = "Product_Name: " + p_name;
+
+            var rate = Number(document.getElementById("txt3").value);
+            document.getElementById("num3").innerHTML = "Rate: " + rate;
+
+            var gst = Number(document.getElementById("txt4").value);
+            document.getElementById("num4").innerHTML = "GST: " + gst;
+
+            var qty = Number(document.getElementById("txt5").value);
+            document.getElementById("num5").innerHTML = "Quantity: " + qty;
+
+
+
+            var total_amount= rate*qty+(rate*gst/100)*qty;            
+            
+            Number(document.getElementById("msg1").innerHTML="TOTAL AMOUNT="+total_amount);
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+    <label>Product_id</label>
+    <input type="number" id="txt1"/><br><br>
+
+    <label>Product_Name</label>
+    <input type="text" id="txt2"/><br><br>
+
+    <label>Rate</label>
+    <input type="number" id="txt3"/><br><br>
+
+    <label>GST</label>
+    <input type="number" id="txt4"/><br><br>
+
+    <label>Quantity</label>
+    <input type="number" id="txt5"/><br><br>
+
+
+    <input type="button" value="Submit" onclick="total()"/>
+
+
+    <hr/>
+    
+    <h3 id="num1"></h3>
+    <h3 id="num2"></h3>
+    <h3 id="num3"></h3>
+    <h3 id="num4"></h3>
+    <h3 id="num5"></h3>
+
+    <h1 id="msg1"></h1>
+
+
+</body>
+</html>

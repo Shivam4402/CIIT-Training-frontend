@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function voting(){
+
+                     var age=document.getElementById("age-1").value;
+
+            
+                    if(age>=18){
+                        // document.write("candidate is eligible to voting")
+                        document.getElementById("msg").innerHTML="candidate is eligible to voting";
+            
+                    }
+                    else{
+                        // document.write("candidate is not eligible to voting")
+                        document.getElementById("msg").innerHTML="candidate is not eligible to voting";
+            
+            
+                    }
+        }
+      
+    </script>
+</head>
+<body>
+    
+    <label>Enter AGE:</label>
+    <input type="number" id="age-1" />
+
+    <input type="button" value="Submit" onclick="voting()"/>
+
+    <hr/>
+
+    <h2 id="msg"></h2>
+    
+</body>
+</html>
